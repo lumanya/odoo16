@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <!-- Inherit Form view -->
+    <record id="inherited_res_partner_view_form" model="ir.ui.view">
+    <field name="name">inherited.res.partner.view.form</field>
+    <field name="model">res.partner</field>
+    <field name="inherit_id" ref="base.view_partner_form"/>
+    <field name="arch" type="xml">
+        <field name="vat" position="after">
+            <!-- Add your fields or attributes here -->
+            <field name="vrn_number"></field>
+            <field name="account_manager_id"></field>       
+            
+            
+        </field>
+        <field name="website" position="after">
+            <field name="industry_id" string="Industry Category"></field>
+            <field name="sector_id"></field>
+            <field name="market_category_id"></field>
+            <field name="customer_type_id"></field>
+        </field>
+    </field>
+</record>
+
+ <menuitem
+    id="sector_info_contact"
+    name="Sectors"
+    action="sector_info_action"    
+    parent="contacts.res_partner_menu_config"
+    sequence="4"/>
+    <menuitem
+    id="market_category_contact"
+    name="Market Category"
+    action="market_category_action"    
+    parent="contacts.res_partner_menu_config"
+    sequence="4"/>
+     <menuitem
+    id="customer_typ_contact"
+    name="Customer Type"
+    action="customer_type_action"    
+    parent="contacts.res_partner_menu_config"
+    sequence="4"/>
+</odoo>
+

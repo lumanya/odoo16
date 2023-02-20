@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <record id= "crm_payment_terms_action" model="ir.actions.act_window">
+        <field name="name">Payment Terms</field>
+        <field name="res_model">payment.terms</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="crm_payment_terms_view_tree" model="ir.ui.view">
+    <field name="name">payment.terms.view.tree</field>
+    <field name="model">payment.terms</field>
+    <field name="arch" type="xml">
+        <tree string='Payment Terms' editable="bottom">
+            <field name="name"></field>            
+        </tree>
+    </field>
+</record>
+</odoo>

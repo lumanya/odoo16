@@ -1,0 +1,10 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_estate_property,access_estate_property,model_estate_property,base.group_user,1,1,1,1,1
+access_sector_info,access_sector_info,model_sector_info,base.group_user,1,1,1,1,1
+access_market_category,access_market_category,model_market_category,base.group_user,1,1,1,1,1
+access_customer_type,access_customer_type,model_customer_type,base.group_user,1,1,1,1,1
+access_account_type,access_account_type,model_account_type,base.group_user,1,1,1,1,1
+access_purchase_time,access_purchase_time,model_purchase_time,base.group_user,1,1,1,1,1
+access_payment_terms,access_payment_terms,model_payment_terms,base.group_user,1,1,1,1,1
+access_manufacturer,access_manufacturer,model_manufacturer,base.group_user,1,1,1,1,1
+

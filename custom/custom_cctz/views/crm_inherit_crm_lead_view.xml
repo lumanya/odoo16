@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <!-- Inherit Form view -->
+    <record id="inherit_crm_lead_form_view" model="ir.ui.view">
+        <field name="name">inherit.crm.lead.form</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.crm_lead_view_form"/>
+        <field name="arch" type="xml">
+            <field name="user_id" position="before">
+                <field name="business_unit"></field>
+            </field>
+            <field name="user_id" position="after">
+                <!-- Add your fields or attributes here -->
+                <field name="pre_sale_id"></field>
+                <field name="account_manager"></field>
+            </field>
+            <field name="tag_ids" position="before">
+                <field name="source"></field>
+            </field>
+            <xpath expr="//group[@name='opportunity_partner']//field[@name='user_company_ids']"
+             position="after">
+                    <field name="account_type_id"/>
+                    <field name="purchase_time_frame_id"></field>
+                    <field name="payment_terms_id"></field>
+            </xpath>
+            
+        </field>
+    </record>
+     <menuitem
+    id="account_type_contact"
+    name="Account Type"
+    action="crm_account_type_action"    
+    parent="crm.crm_menu_config"
+    sequence="6"/>
+    <menuitem
+    id="crm_payment_terms_action_id"
+    name="Payment Terms"
+    action="crm_payment_terms_action"    
+    parent="crm.crm_menu_config"
+    sequence="6"/>
+    <menuitem
+    id="purchase_time_frame_menu"
+    name="Purchase Time Frame"
+    action="crm_payment_time_frame_action"    
+    parent="crm.crm_menu_config"
+    sequence="6"/>
+</odoo>

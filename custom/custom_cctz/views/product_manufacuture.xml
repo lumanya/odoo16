@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <record id= "product_manufacturer_action" model="ir.actions.act_window">
+        <field name="name">Manufacturer</field>
+        <field name="res_model">manufacturer</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="product_manufacturer_view_tree" model="ir.ui.view">
+    <field name="name">manufacturer.view.tree</field>
+    <field name="model">manufacturer</field>
+    <field name="arch" type="xml">
+        <tree string='Manufacturer' editable="bottom">
+            <field name="name"></field>            
+        </tree>
+    </field>
+</record>
+</odoo>

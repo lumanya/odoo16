@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <record id= "customer_type_action" model="ir.actions.act_window">
+        <field name="name">Customer_type</field>
+        <field name="res_model">customer.type</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="customer_type_view_tree" model="ir.ui.view">
+    <field name="name">customer.type.view.tree</field>
+    <field name="model">customer.type</field>
+    <field name="arch" type="xml">
+        <tree string='Customer' editable="bottom">
+            <field name="name"></field>           
+        </tree>
+    </field>
+</record>
+</odoo>

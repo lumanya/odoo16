@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="inherit_product_template_form">
+            <field name="name">product.template.form</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="product.product_template_only_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='barcode']" position="after">
+                    <field name="part_number"/>
+                    <field name="business_unit_id"></field>
+                    <field name="manufacturer_id"></field>
+                </xpath>
+            </field>
+        </record>
+    </data>
+
+    <menuitem
+        id="product_manufacturer_action_menu"
+        name="Product Manufacturer"
+        action="product_manufacturer_action"       
+        parent="purchase.menu_purchase_config"
+        sequence="0"/>
+</odoo>

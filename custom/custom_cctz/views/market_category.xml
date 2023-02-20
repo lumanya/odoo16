@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <record id= "market_category_action" model="ir.actions.act_window">
+        <field name="name">Market Category</field>
+        <field name="res_model">market.category</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="market_category_view_tree" model="ir.ui.view">
+    <field name="name">market.category.view.tree</field>
+    <field name="model">market.category</field>
+    <field name="arch" type="xml">
+        <tree string='Market Category' editable="bottom">
+            <field name="name"></field>            
+        </tree>
+    </field>
+</record>
+</odoo>
