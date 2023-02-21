@@ -22,6 +22,7 @@
                     <field name="account_type_id"/>
                     <field name="purchase_time_frame_id"></field>
                     <field name="payment_terms_id"></field>
+                    <field name="status_id"></field>
             </xpath>
             
         </field>
@@ -42,6 +43,12 @@
     id="purchase_time_frame_menu"
     name="Purchase Time Frame"
     action="crm_payment_time_frame_action"    
+    parent="crm.crm_menu_config"
+    sequence="6"/>
+    <menuitem
+    id="crm_status_action_menu"
+    name="CRM status"
+    action="crm_status_action"    
     parent="crm.crm_menu_config"
     sequence="6"/>
 </odoo>

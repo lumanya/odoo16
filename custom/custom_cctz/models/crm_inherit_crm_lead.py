@@ -11,6 +11,7 @@ class CrmLead(models.Model):
     account_type_id = fields.Many2one('account.type', string='Account Type')
     purchase_time_frame_id = fields.Many2one('purchase.time', string="Purchase Time Frame")
     payment_terms_id = fields.Many2one('payment.terms', string="Payment Terms")
+    status_id = fields.Many2one('crm.status', string="status")
 
     
 

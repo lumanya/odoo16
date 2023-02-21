@@ -9,3 +9,4 @@ from . import crm_account_type
 from . import crm_purchase_time_frame
 from . import crm_payment_terms
 from . import product_manufacturer
+from . import crm_status

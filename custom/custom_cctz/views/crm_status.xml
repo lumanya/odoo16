@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <record id= "crm_status_action" model="ir.actions.act_window">
+        <field name="name">Crm status</field>
+        <field name="res_model">crm.status</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="crm_status_view_tree" model="ir.ui.view">
+    <field name="name">crm.status.view.tree</field>
+    <field name="model">crm.status</field>
+    <field name="arch" type="xml">
+        <tree string='Crm status' editable="bottom">
+            <field name="name"></field>            
+        </tree>
+    </field>
+</record>
+</odoo>

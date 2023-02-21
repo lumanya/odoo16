@@ -7,4 +7,5 @@ access_account_type,access_account_type,model_account_type,base.group_user,1,1,1
 access_purchase_time,access_purchase_time,model_purchase_time,base.group_user,1,1,1,1,1
 access_payment_terms,access_payment_terms,model_payment_terms,base.group_user,1,1,1,1,1
 access_manufacturer,access_manufacturer,model_manufacturer,base.group_user,1,1,1,1,1
+access_crm_status,access_crm_status,model_crm_status,base.group_user,1,1,1,1,1
 
