@@ -13,6 +13,9 @@
                 <!-- Add your fields or attributes here -->
                 <field name="pre_sale_id"></field>
                 <field name="account_manager"></field>
+                <field name="tender_status"></field>
+               
+
             </field>
             <field name="tag_ids" position="before">
                 <field name="source"></field>
@@ -23,6 +26,8 @@
                     <field name="purchase_time_frame_id"></field>
                     <field name="payment_terms_id"></field>
                     <field name="status_id"></field>
+                    <field name="cc_care"></field>
+                    <field name="renewable_subscription"></field>
             </xpath>
             
         </field>
