@@ -12,15 +12,18 @@ class CrmLead(models.Model):
     purchase_time_frame_id = fields.Many2one('purchase.time', string="Purchase Time Frame")
     payment_terms_id = fields.Many2one('payment.terms', string="Payment Terms")
     status_id = fields.Many2one('crm.status', string="status")
+    cc_margin = fields.Integer(string="CC Margin")
     tender_status = fields.Selection([
         ('Yes', 'Yes'),
         ('No', 'No')
-    ], string="Tender Status", required=True)
+    ], string="Tender Status")
     renewable_subscription = fields.Selection([
+        ('None', 'None'),
         ('First Time Opportunity With Subscription', 'First Time Opportunity With Subscription'),
         ('Re-occuring Opportunity With Subscription', 'Re-occuring Opportunity With Subscription')
     ], string="Renewable Subscription")
     cc_care = fields.Selection([
+        ('None', 'None'),
         ('Breake and Fix', 'Break and Fix'),
         ('Install', 'Install'),
         ('Remote', 'Remote'),

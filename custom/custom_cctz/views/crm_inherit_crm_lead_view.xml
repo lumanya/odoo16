@@ -19,6 +19,7 @@
             </field>
             <field name="tag_ids" position="before">
                 <field name="source"></field>
+                <field name="cc_margin"></field>
             </field>
             <xpath expr="//group[@name='opportunity_partner']//field[@name='user_company_ids']"
              position="after">
