@@ -10,3 +10,4 @@ from . import crm_purchase_time_frame
 from . import crm_payment_terms
 from . import product_manufacturer
 from . import crm_status
+from . import sale_order_line_inherit

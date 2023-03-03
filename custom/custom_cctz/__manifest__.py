@@ -13,7 +13,8 @@
         'crm',
         'contacts',
         'mail',
-        'purchase'
+        'purchase',
+        'sale_management'
        
         
     ],
@@ -30,7 +31,7 @@
     'views/market_category.xml',
     'views/customer_type.xml',
     'views/inherit_res_partner.xml'
-    
+       
     ],
     'images': ['static/description/banner.png'],
     'installable': True,

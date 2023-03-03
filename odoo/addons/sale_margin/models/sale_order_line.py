@@ -31,7 +31,7 @@ class SaleOrderLine(models.Model):
     def _compute_margin(self):
         for line in self:
             line.margin = line.price_subtotal - (line.purchase_price * line.product_uom_qty)
-            line.margin_percent = line.price_subtotal and line.margin/line.price_subtotal
+            #line.margin_percent = line.price_subtotal and line.margin/line.price_subtotal
 
     def _convert_price(self, product_cost, from_uom):
         self.ensure_one()
