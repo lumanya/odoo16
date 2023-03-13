@@ -14,7 +14,7 @@
                 <field name="pre_sale_id"></field>
                 <field name="account_manager"></field>
                 <field name="tender_status"></field>
-               
+                <field name="tender_submission_date"></field>
 
             </field>
             <field name="tag_ids" position="before">

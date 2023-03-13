@@ -6,7 +6,7 @@ class SaleOrderLine(models.Model):
 
 
     price_unit = fields.Float( 
-        string="Selling Price",      
+        string="Unit Price",      
         compute='_compute_price_unit',
         digits='Product Price',
         store=True, readonly=True, precompute=True)
@@ -71,7 +71,7 @@ class SaleOrderLine(models.Model):
                 print(line.margin_percent)
                 margin = line.purchase_price * line.margin_percent
                 print("Margin:", margin)
-                price =  line.product_uom_qty * (line.purchase_price + margin)
+                price =  line.purchase_price + margin
                 print("Price:", price)
                 line.price_unit = line.product_id._get_tax_included_unit_price(
                     line.company_id,

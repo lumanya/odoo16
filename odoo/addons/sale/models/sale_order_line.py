@@ -134,7 +134,7 @@ class SaleOrderLine(models.Model):
         string="Unit Price",
         compute='_compute_price_unit',
         digits='Product Price',
-        store=True, readonly=False, required=True, precompute=True)
+        store=True, readonly=True, required=True, precompute=True)
 
     discount = fields.Float(
         string="Discount (%)",
@@ -495,7 +495,7 @@ class SaleOrderLine(models.Model):
         if no_variant_attributes_price_extra:
             res['no_variant_attributes_price_extra'] = tuple(no_variant_attributes_price_extra)
 
-        return res
+        return res_compute_purchase_price
 
     def _get_pricelist_price_before_discount(self):
         """Compute the price used as base for the pricelist price computation.

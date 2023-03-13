@@ -3,7 +3,8 @@ from odoo import fields, api, models, _
 
 class CrmLead(models.Model):
     _inherit = 'crm.lead'
-   
+
+    tender_submission_date = fields.Datetime(string='Date Submission Date')
     pre_sale_id = fields.Many2one('res.users', string='Pre-Sales Person')
     account_manager = fields.Many2one('res.users', string='Account Manager')
     source = fields.Many2one('res.users', string='Source')
@@ -12,7 +13,7 @@ class CrmLead(models.Model):
     purchase_time_frame_id = fields.Many2one('purchase.time', string="Purchase Time Frame")
     payment_terms_id = fields.Many2one('payment.terms', string="Payment Terms")
     status_id = fields.Many2one('crm.status', string="status")
-    cc_margin = fields.Integer(string="CC Margin")
+    cc_margin = fields.Float(string="CC Margin")
     tender_status = fields.Selection([
         ('Yes', 'Yes'),
         ('No', 'No')
